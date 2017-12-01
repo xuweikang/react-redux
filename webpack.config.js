@@ -15,7 +15,7 @@ module.exports = {
         major: _env.inputPath + '/app.js',
         make_redux:_env.inputPath + '/make-redux/index.js',
         make_redux2:_env.inputPath + '/make-redux2/index.js',   //使用原生的去模拟redux
-        redux:_env.inputPath + '/redux/index.js'  //使用真正的redux去构建应用的状态
+        redux:_env.inputPath + '/redux-real/index.js'  //使用真正的redux去构建应用的状态
     },
     output: {
         path: __dirname + '/dist' + _env.outputPath,
@@ -69,7 +69,7 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: path.resolve(__dirname, 'src/make-redux2'),
+        contentBase: path.resolve(__dirname, 'src/redux-real'),
         compress: true,
         port: 2111
     },
