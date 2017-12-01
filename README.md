@@ -1,5 +1,5 @@
 # react-redux
-这是一个react和redux 的学习笔记
+这是一个react和redux 的小项目
 
 
 ## **npm install** <br>
