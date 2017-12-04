@@ -1,6 +1,6 @@
 import React, { Component, PropTypes} from 'react'
 
-export default (mapStateToProps, mapDispatchToProps) => (WrappedComponent) => {
+export default (mapStateToProps, mapDispatchToProps, mapDispatchToPropsAsync) => (WrappedComponent) => {
     class Connect extends Component {
       static contextTypes = {
         store: PropTypes.object
@@ -21,10 +21,12 @@ export default (mapStateToProps, mapDispatchToProps) => (WrappedComponent) => {
           const { store } = this.context
           let stateProps = mapStateToProps? mapStateToProps(store.getState(), this.props) : {}
           let dispatchProps = mapDispatchToProps? mapDispatchToProps(store.dispatch, this.props): {}
+          let dispatchAsync = mapDispatchToPropsAsync? mapDispatchToPropsAsync(store.dispatch,store.getState()):{}
           this.setState({
               allProps:{
                   ...stateProps,
                   ...dispatchProps,
+                  ...dispatchAsync,
                   ...this.props
               }
           })

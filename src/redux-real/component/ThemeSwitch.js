@@ -1,11 +1,11 @@
 import React, {Component, PropTypes} from 'react'
 import connect from './ConnectHigh'
-import changeColor from '../reducers/themeColor'
+import {changeColor} from '../reducers/themeColor'
 class ThemeSwitch extends Component{
 
-    static contextTypes = {
-        store: PropTypes.object
-    }
+    // static contextTypes = {
+    //     store: PropTypes.object
+    // }
 
     // constructor(){
     //     super()
@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onSwitchColor: (color) => {
-            dispatch(changeColor(color))
+            dispatch(changeColor(color)) 
         }
     }
 }
