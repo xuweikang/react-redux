@@ -8,7 +8,7 @@
 src/app.js  //react根项目 <br>
 src/make-redux //模拟redux 一 <br>
 src/make-redux2 //模拟redux 二 <br>
-src/redux  //使用real redux  <br>
+src/redux－real  //使用real redux  <br>
 
 # 修改项目的打开方式(选择入口)
 <pre><code>
